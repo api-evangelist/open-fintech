@@ -1,0 +1,1256 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "2017-08-24",
+        "title": "Open FinTech",
+        "description": "OpenFinTech.io is an open database that comprises of standardized primary data for FinTech industry. It contains such information as geolocation data (countries, cities, regions), organizations, currencies (national, digital, virtual, crypto), banks, digital exchangers, payment providers (PSP), payment methods, etc.It is created for communication of cross-integrated micro-services on \"one language\". This is achieved through standardization of entity identifiers that are used to exchange information among different services.",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsapi.openfintech.io\/v1\/"
+    ],
+    "paths": {
+        "\/banks": {
+            "get": {
+                "summary": "List of banks",
+                "description": "Returns list of banks. Each object contains general information about bank such as name and status, also information about bank details and related link to main organization.\n",
+                "operationId": "BanksGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "filter[sort_code]",
+                        "in": "query",
+                        "description": "Filtering by banks code."
+                    },
+                    {
+                        "name": "filter[status]",
+                        "in": "query",
+                        "description": "Filtration by status."
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Sort params:<br>\n\n| ASC | DESC |\n|-----|------|\n| name | -name |\n| code | -code |\n| status | -status |\n| sort_code | -sort_code |\n"
+                    }
+                ]
+            }
+        },
+        "\/banks\/{id}": {
+            "get": {
+                "summary": "Bank by ID",
+                "description": "Returns bank with specific ID.\n",
+                "operationId": "BanksIdGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/countries": {
+            "get": {
+                "summary": "List of countries",
+                "description": "Returns all available countries.\n",
+                "operationId": "CountriesGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "filter[region]",
+                        "in": "query",
+                        "description": "Filtration by region."
+                    },
+                    {
+                        "name": "filter[sub_region]",
+                        "in": "query",
+                        "description": "Filtration by sub region."
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Sort params:<br>\n\n| ASC | DESC |\n|-----|------|\n| name | -name |\n| code | -code |\n| status | -status |\n| sort_code | -sort_code |\n"
+                    }
+                ]
+            }
+        },
+        "\/countries\/{id}": {
+            "get": {
+                "summary": "Country by ID",
+                "description": "Returns country with specific ID.\n",
+                "operationId": "CountriesIdGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/currencies": {
+            "get": {
+                "summary": "List of currencies",
+                "description": "Returns all available currencies.\n",
+                "operationId": "CurrenciesGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "filter[search]",
+                        "in": "query",
+                        "description": "Full text search with name, code, type, code_iso_alpha3, code_jsons_alpha, code_estandards_alpha, category."
+                    },
+                    {
+                        "name": "filter[code_iso_alpha3]",
+                        "in": "query",
+                        "description": "Filtering by ISO code."
+                    },
+                    {
+                        "name": "filter[code_iso_numeric3]",
+                        "in": "query",
+                        "description": "Filtering by ISO number."
+                    },
+                    {
+                        "name": "filter[code_estandards_alpha]",
+                        "in": "query",
+                        "description": "Filtering by estandards code."
+                    },
+                    {
+                        "name": "filter[currency_type]",
+                        "in": "query",
+                        "description": "Filtration by currency type."
+                    },
+                    {
+                        "name": "filter[category]",
+                        "in": "query",
+                        "description": "Filtration by category."
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Sort params:<br>\n\n| ASC | DESC |\n|-----|------|\n| name | -name |\n| code | -code |\n| status | -status |\n| sort_code | -sort_code |\n"
+                    }
+                ]
+            }
+        },
+        "\/currencies\/{id}": {
+            "get": {
+                "summary": "Currency by ID",
+                "description": "Returns currency with specific ID.\n",
+                "operationId": "CurrenciesIdGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/exchangers": {
+            "get": {
+                "summary": "List of exchangers",
+                "description": "Returns list of exchange markets. Each object contains general information about exchanger such as name and status, also information about rates export and related link to main organization.<br>\nRates export standards is represented by:\n* [estandards](http:\/\/estandards.info)\n* [jsons](http:\/\/jsons.info)\n* ratex - our internal standard\n",
+                "operationId": "ExchangersGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Sort params:<br>\n\n| ASC | DESC |\n|-----|------|\n| name | -name |\n| code | -code |\n| status | -status |\n| sort_code | -sort_code |\n"
+                    }
+                ]
+            }
+        },
+        "\/exchangers\/{id}": {
+            "get": {
+                "summary": "Exchanger by ID",
+                "description": "Returns exchanger with specific ID.\n",
+                "operationId": "ExchangersIdGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/merchant-industries": {
+            "get": {
+                "summary": "List of merchant industries",
+                "description": "Returns all available merchant fields of activity.\n",
+                "operationId": "MerchantIndustriesGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/merchant-industries\/{id}": {
+            "get": {
+                "summary": "Merchant industry by ID",
+                "description": "Returns merchant industry with specific ID.\n",
+                "operationId": "MerchantIndustriesIdGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/organizations": {
+            "get": {
+                "summary": "List of organizations",
+                "description": "This endpoint retrievs the list of organizations present in the system. The data displays general, public information, without reference to the type of activity (for example - name, address, contacts, etc.).\n",
+                "operationId": "OrganizationsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "filter[search]",
+                        "in": "query",
+                        "description": "Full text search with name, code, type, code_iso_alpha3, code_jsons_alpha, code_estandards_alpha, category."
+                    },
+                    {
+                        "name": "filter[industries]",
+                        "in": "query",
+                        "description": "Filtering by industries."
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Sort params:<br>\n\n| ASC | DESC |\n|-----|------|\n| name | -name |\n| code | -code |\n| status | -status |\n| sort_code | -sort_code |\n"
+                    }
+                ]
+            }
+        },
+        "\/organizations\/{id}": {
+            "get": {
+                "summary": "Organization by ID",
+                "description": "Returns organization with specific ID.\n",
+                "operationId": "OrganizationsIdGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/payment-methods": {
+            "get": {
+                "summary": "List of payment methods",
+                "description": "Returns list of payment methods. Each object contains information about payment method such as name and category, also related link to payment method issuer (which processing it).\n",
+                "operationId": "PaymentMethodsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "filter[search]",
+                        "in": "query",
+                        "description": "Full text search with name, code, type, code_iso_alpha3, code_jsons_alpha, code_estandards_alpha, category."
+                    },
+                    {
+                        "name": "filter[processor_name]",
+                        "in": "query",
+                        "description": "Filtering by processor_name."
+                    },
+                    {
+                        "name": "filter[category]",
+                        "in": "query",
+                        "description": "Filtration by category."
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Sort params:<br>\n\n| ASC | DESC |\n|-----|------|\n| name | -name |\n| code | -code |\n| status | -status |\n| sort_code | -sort_code |\n"
+                    }
+                ]
+            }
+        },
+        "\/payment-methods\/{id}": {
+            "get": {
+                "summary": "Payment method by ID",
+                "description": "Returns payment method with specific ID.\n",
+                "operationId": "PaymentMethodsIdGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/payment-providers": {
+            "get": {
+                "summary": "List of payment providers",
+                "description": "A payment service provider (PSP) offers shops online services for accepting electronic payments by a variety of payment methods.<br> Endpoint returns list of PSPs. Each object contains: name, type, supported features and sales channels, also related link to available payment methods and main organization.\n",
+                "operationId": "PaymentProvidersGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "filter[search]",
+                        "in": "query",
+                        "description": "Full text search with name, code, type, code_iso_alpha3, code_jsons_alpha, code_estandards_alpha, category."
+                    },
+                    {
+                        "name": "filter[types]",
+                        "in": "query",
+                        "description": "Filtering by types."
+                    },
+                    {
+                        "name": "filter[sales_channels]",
+                        "in": "query",
+                        "description": "Filtering by sales channels."
+                    },
+                    {
+                        "name": "filter[features]",
+                        "in": "query",
+                        "description": "Filtering by features."
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Sort params:<br>\n\n| ASC | DESC |\n|-----|------|\n| name | -name |\n| code | -code |\n| status | -status |\n| sort_code | -sort_code |\n"
+                    }
+                ]
+            }
+        },
+        "\/payment-providers\/{id}": {
+            "get": {
+                "summary": "Payment provider by ID",
+                "description": "Returns payment provider with specific ID.\n",
+                "operationId": "PaymentProvidersIdGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Bank": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "BankAttributes": {
+                "type": "object",
+                "properties": {
+                    "account_number": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "bank_code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "bic": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "iban": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "sort_code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "vatin": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "BankOrganization": {
+                "type": "object"
+            },
+            "BankOrganizationData": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "BankOrganizationLinks": {
+                "type": "object",
+                "properties": {
+                    "related": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "BankRelationships": {
+                "type": "object"
+            },
+            "BankResponse": {
+                "type": "object"
+            },
+            "BanksResponse": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CountriesResponse": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Country": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CountryAttributes": {
+                "type": "object",
+                "properties": {
+                    "area": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "calling_codes": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "capital": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "code_alpha3": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "languages": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "native_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "population": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "region": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "sub_region": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "timezones": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "top_level_domains": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CountryRelationships": {
+                "type": "object"
+            },
+            "CountryResponse": {
+                "type": "object"
+            },
+            "CountryTranslations": {
+                "type": "object"
+            },
+            "CountryTranslationsLinks": {
+                "type": "object",
+                "properties": {
+                    "related": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CurrenciesResponse": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Currency": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CurrencyAttributes": {
+                "type": "object",
+                "properties": {
+                    "category": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "code_estandards_alpha": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "code_iso_alpha3": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "code_iso_numeric3": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "code_json_alpha": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "created": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "currency_type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "decimal_e": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "issuer": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "native_symbol": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "symbol": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CurrencyAttributesIcon": {
+                "type": "object",
+                "properties": {
+                    "16": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "32": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "64": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CurrencyCountries": {
+                "type": "object"
+            },
+            "CurrencyCountryLinks": {
+                "type": "object",
+                "properties": {
+                    "related": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CurrencyIssuer": {
+                "type": "object"
+            },
+            "CurrencyIssuerLinks": {
+                "type": "object",
+                "properties": {
+                    "related": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CurrencyIssuerOrganization": {
+                "type": "object"
+            },
+            "CurrencyIssuerOrganizationData": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CurrencyIssuerOrganizationLinks": {
+                "type": "object",
+                "properties": {
+                    "related": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CurrencyIssuertData": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CurrencyParent": {
+                "type": "object"
+            },
+            "CurrencyParentData": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CurrencyParentLinks": {
+                "type": "object",
+                "properties": {
+                    "related": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CurrencyRelationships": {
+                "type": "object"
+            },
+            "CurrencyResponse": {
+                "type": "object"
+            },
+            "Exchanger": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ExchangerAttributes": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "rates_export_standard": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "rates_export_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "wmid": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ExchangerOrganization": {
+                "type": "object"
+            },
+            "ExchangerOrganizationData": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ExchangerOrganizationLinks": {
+                "type": "object",
+                "properties": {
+                    "related": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ExchangerRelationships": {
+                "type": "object"
+            },
+            "ExchangerResponse": {
+                "type": "object"
+            },
+            "ExchangersResponse": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "MerchantIndustriesResponse": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "MerchantIndustry": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "MerchantIndustryAttributes": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "MerchantIndustryResponse": {
+                "type": "object"
+            },
+            "Organization": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OrganizationActive": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OrganizationActiveLinks": {
+                "type": "object",
+                "properties": {
+                    "related": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OrganizationAddress": {
+                "type": "object",
+                "properties": {
+                    "city": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "country": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "post_code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "region": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "street": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OrganizationAttributes": {
+                "type": "object",
+                "properties": {
+                    "blog": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "industries": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "site": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "wiki": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OrganizationAttributesIcon": {
+                "type": "object",
+                "properties": {
+                    "16": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "32": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "64": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OrganizationAttributesLogo": {
+                "type": "object",
+                "properties": {
+                    "50": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "100": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "150": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OrganizationContacts": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "fax": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "phone": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "skype": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OrganizationHq": {
+                "type": "object"
+            },
+            "OrganizationHqData": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OrganizationHqLinks": {
+                "type": "object",
+                "properties": {
+                    "related": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OrganizationRelationships": {
+                "type": "object"
+            },
+            "OrganizationResponse": {
+                "type": "object"
+            },
+            "OrganizationSocial": {
+                "type": "object",
+                "properties": {
+                    "facebook": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "google_plus": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "linked_in": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "twitter": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "vkontakte": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OrganizationSource": {
+                "type": "object"
+            },
+            "OrganizationSourceData": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OrganizationSourceLinks": {
+                "type": "object",
+                "properties": {
+                    "related": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OrganizationsResponse": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PaymentMethod": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PaymentMethodAttributes": {
+                "type": "object",
+                "properties": {
+                    "category": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "processor_name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PaymentMethodCurrencies": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PaymentMethodCurrenciesLinks": {
+                "type": "object",
+                "properties": {
+                    "related": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PaymentMethodProcessor": {
+                "type": "object"
+            },
+            "PaymentMethodProcessorData": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PaymentMethodProcessorLinks": {
+                "type": "object",
+                "properties": {
+                    "related": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PaymentMethodRelationships": {
+                "type": "object"
+            },
+            "PaymentMethodResponse": {
+                "type": "object"
+            },
+            "PaymentMethodsResponse": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PaymentProvider": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PaymentProviderAttributes": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "features": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "sales_channels": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "types": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PaymentProviderOrganization": {
+                "type": "object"
+            },
+            "PaymentProviderOrganizationData": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PaymentProviderOrganizationLinks": {
+                "type": "object",
+                "properties": {
+                    "related": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PaymentProviderPaymentMethods": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PaymentProviderPaymentMethodsLinks": {
+                "type": "object",
+                "properties": {
+                    "related": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PaymentProviderRelationships": {
+                "type": "object"
+            },
+            "PaymentProviderResponse": {
+                "type": "object"
+            },
+            "PaymentProvidersResponse": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ResponseLinks": {
+                "type": "object",
+                "properties": {
+                    "first": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "last": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "next": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "prev": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ResponseMeta": {
+                "type": "object",
+                "properties": {
+                    "pages": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "SelfLinks": {
+                "type": "object",
+                "properties": {
+                    "self": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            }
+        }
+    }
+}
