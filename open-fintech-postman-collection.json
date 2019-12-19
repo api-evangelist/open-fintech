@@ -1,0 +1,570 @@
+{
+    "id": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+    "name": "Open FinTech",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "0c65ac18604a1e6fd9c5a6206ea0c876",
+            "name": "List of banks",
+            "url": "httpsapi.openfintech.io\/v1\/\/banks",
+            "description": "Returns list of banks. Each object contains general information about bank such as name and status, also information about bank details and related link to main organization.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "filter[sort_code]",
+                    "description": "Filtering by banks code.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter[status]",
+                    "description": "Filtration by status.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sort",
+                    "description": "Sort params:<br>\n\n| ASC | DESC |\n|-----|------|\n| name | -name |\n| code | -code |\n| status | -status |\n| sort_code | -sort_code |\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "rawModeData": ""
+        },
+        {
+            "id": "de14ee92c245bd0b9a943e558aa2837e",
+            "name": "Bank by ID",
+            "url": "httpsapi.openfintech.io\/v1\/\/banks\/{id}",
+            "description": "Returns bank with specific ID.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "rawModeData": ""
+        },
+        {
+            "id": "ef1493fe2c2679f6c8cb1c343bf293ab",
+            "name": "List of countries",
+            "url": "httpsapi.openfintech.io\/v1\/\/countries",
+            "description": "Returns all available countries.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "filter[region]",
+                    "description": "Filtration by region.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter[sub_region]",
+                    "description": "Filtration by sub region.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sort",
+                    "description": "Sort params:<br>\n\n| ASC | DESC |\n|-----|------|\n| name | -name |\n| code | -code |\n| status | -status |\n| sort_code | -sort_code |\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "rawModeData": ""
+        },
+        {
+            "id": "7d662515e83b98e4af1388cd2258c10a",
+            "name": "Country by ID",
+            "url": "httpsapi.openfintech.io\/v1\/\/countries\/{id}",
+            "description": "Returns country with specific ID.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "rawModeData": ""
+        },
+        {
+            "id": "940ac0f100a7c9ed2630b17541e42546",
+            "name": "List of currencies",
+            "url": "httpsapi.openfintech.io\/v1\/\/currencies",
+            "description": "Returns all available currencies.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "filter[search]",
+                    "description": "Full text search with name, code, type, code_iso_alpha3, code_jsons_alpha, code_estandards_alpha, category.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter[code_iso_alpha3]",
+                    "description": "Filtering by ISO code.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter[code_iso_numeric3]",
+                    "description": "Filtering by ISO number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter[code_estandards_alpha]",
+                    "description": "Filtering by estandards code.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter[currency_type]",
+                    "description": "Filtration by currency type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter[category]",
+                    "description": "Filtration by category.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sort",
+                    "description": "Sort params:<br>\n\n| ASC | DESC |\n|-----|------|\n| name | -name |\n| code | -code |\n| status | -status |\n| sort_code | -sort_code |\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "rawModeData": ""
+        },
+        {
+            "id": "3cda7b47f70b0d191b3480106e7af6eb",
+            "name": "Currency by ID",
+            "url": "httpsapi.openfintech.io\/v1\/\/currencies\/{id}",
+            "description": "Returns currency with specific ID.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "rawModeData": ""
+        },
+        {
+            "id": "07b5e46d437e50fce8422f9507bf14a2",
+            "name": "List of exchangers",
+            "url": "httpsapi.openfintech.io\/v1\/\/exchangers",
+            "description": "Returns list of exchange markets. Each object contains general information about exchanger such as name and status, also information about rates export and related link to main organization.<br>\nRates export standards is represented by:\n* [estandards](http:\/\/estandards.info)\n* [jsons](http:\/\/jsons.info)\n* ratex - our internal standard\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "sort",
+                    "description": "Sort params:<br>\n\n| ASC | DESC |\n|-----|------|\n| name | -name |\n| code | -code |\n| status | -status |\n| sort_code | -sort_code |\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "rawModeData": ""
+        },
+        {
+            "id": "00f6ddbf0cbfd177593afc04a457bdf6",
+            "name": "Exchanger by ID",
+            "url": "httpsapi.openfintech.io\/v1\/\/exchangers\/{id}",
+            "description": "Returns exchanger with specific ID.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "rawModeData": ""
+        },
+        {
+            "id": "636701aecb4d3ade75b947fc4e19dc0f",
+            "name": "List of merchant industries",
+            "url": "httpsapi.openfintech.io\/v1\/\/merchant-industries",
+            "description": "Returns all available merchant fields of activity.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "rawModeData": ""
+        },
+        {
+            "id": "a3475fca639a4fc38c05f7803f238f16",
+            "name": "Merchant industry by ID",
+            "url": "httpsapi.openfintech.io\/v1\/\/merchant-industries\/{id}",
+            "description": "Returns merchant industry with specific ID.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "rawModeData": ""
+        },
+        {
+            "id": "95ad7d60c5bd31891e4a7417896e34cc",
+            "name": "List of organizations",
+            "url": "httpsapi.openfintech.io\/v1\/\/organizations",
+            "description": "This endpoint retrievs the list of organizations present in the system. The data displays general, public information, without reference to the type of activity (for example - name, address, contacts, etc.).\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "filter[search]",
+                    "description": "Full text search with name, code, type, code_iso_alpha3, code_jsons_alpha, code_estandards_alpha, category.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter[industries]",
+                    "description": "Filtering by industries.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sort",
+                    "description": "Sort params:<br>\n\n| ASC | DESC |\n|-----|------|\n| name | -name |\n| code | -code |\n| status | -status |\n| sort_code | -sort_code |\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "rawModeData": ""
+        },
+        {
+            "id": "ee7cde171d0bda78bc669e773ee16ce9",
+            "name": "Organization by ID",
+            "url": "httpsapi.openfintech.io\/v1\/\/organizations\/{id}",
+            "description": "Returns organization with specific ID.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "rawModeData": ""
+        },
+        {
+            "id": "9543691d5c2c47f84ca74637be939a7d",
+            "name": "List of payment methods",
+            "url": "httpsapi.openfintech.io\/v1\/\/payment-methods",
+            "description": "Returns list of payment methods. Each object contains information about payment method such as name and category, also related link to payment method issuer (which processing it).\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "filter[search]",
+                    "description": "Full text search with name, code, type, code_iso_alpha3, code_jsons_alpha, code_estandards_alpha, category.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter[processor_name]",
+                    "description": "Filtering by processor_name.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter[category]",
+                    "description": "Filtration by category.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sort",
+                    "description": "Sort params:<br>\n\n| ASC | DESC |\n|-----|------|\n| name | -name |\n| code | -code |\n| status | -status |\n| sort_code | -sort_code |\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "rawModeData": ""
+        },
+        {
+            "id": "41fbe34ab39c53fa6327e2ff91d88ce9",
+            "name": "Payment method by ID",
+            "url": "httpsapi.openfintech.io\/v1\/\/payment-methods\/{id}",
+            "description": "Returns payment method with specific ID.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "rawModeData": ""
+        },
+        {
+            "id": "68ceae36cc6dd9da6a0af54b174a5f94",
+            "name": "List of payment providers",
+            "url": "httpsapi.openfintech.io\/v1\/\/payment-providers",
+            "description": "A payment service provider (PSP) offers shops online services for accepting electronic payments by a variety of payment methods.<br> Endpoint returns list of PSPs. Each object contains: name, type, supported features and sales channels, also related link to available payment methods and main organization.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "filter[search]",
+                    "description": "Full text search with name, code, type, code_iso_alpha3, code_jsons_alpha, code_estandards_alpha, category.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter[types]",
+                    "description": "Filtering by types.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter[sales_channels]",
+                    "description": "Filtering by sales channels.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter[features]",
+                    "description": "Filtering by features.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sort",
+                    "description": "Sort params:<br>\n\n| ASC | DESC |\n|-----|------|\n| name | -name |\n| code | -code |\n| status | -status |\n| sort_code | -sort_code |\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "rawModeData": ""
+        },
+        {
+            "id": "7fda5123acaa7103cff880968394b850",
+            "name": "Payment provider by ID",
+            "url": "httpsapi.openfintech.io\/v1\/\/payment-providers\/{id}",
+            "description": "Returns payment provider with specific ID.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "rawModeData": ""
+        }
+    ]
+}
