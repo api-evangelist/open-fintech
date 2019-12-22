@@ -1,5 +1,5 @@
 {
-    "id": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+    "id": "01fef1b4fef514f533cf759ce1b86113",
     "name": "Open FinTech",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "0c65ac18604a1e6fd9c5a6206ea0c876",
+            "id": "8bd6ccbede4082c5ac98b61e4b3f37f5",
             "name": "List of banks",
             "url": "httpsapi.openfintech.io\/v1\/\/banks",
             "description": "Returns list of banks. Each object contains general information about bank such as name and status, also information about bank details and related link to main organization.\n",
@@ -51,11 +51,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "collectionId": "01fef1b4fef514f533cf759ce1b86113",
             "rawModeData": ""
         },
         {
-            "id": "de14ee92c245bd0b9a943e558aa2837e",
+            "id": "9e34d8bc9e967e58ea6c84b242597599",
             "name": "Bank by ID",
             "url": "httpsapi.openfintech.io\/v1\/\/banks\/{id}",
             "description": "Returns bank with specific ID.\n",
@@ -74,11 +74,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "collectionId": "01fef1b4fef514f533cf759ce1b86113",
             "rawModeData": ""
         },
         {
-            "id": "ef1493fe2c2679f6c8cb1c343bf293ab",
+            "id": "6fb1eee00a470a13a3f4d66efaddaf2b",
             "name": "List of countries",
             "url": "httpsapi.openfintech.io\/v1\/\/countries",
             "description": "Returns all available countries.\n",
@@ -119,11 +119,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "collectionId": "01fef1b4fef514f533cf759ce1b86113",
             "rawModeData": ""
         },
         {
-            "id": "7d662515e83b98e4af1388cd2258c10a",
+            "id": "aebfc080ceb8666ef61dbe6b8a198cdc",
             "name": "Country by ID",
             "url": "httpsapi.openfintech.io\/v1\/\/countries\/{id}",
             "description": "Returns country with specific ID.\n",
@@ -142,11 +142,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "collectionId": "01fef1b4fef514f533cf759ce1b86113",
             "rawModeData": ""
         },
         {
-            "id": "940ac0f100a7c9ed2630b17541e42546",
+            "id": "88c8135f784ba78f584e36aa920b16c7",
             "name": "List of currencies",
             "url": "httpsapi.openfintech.io\/v1\/\/currencies",
             "description": "Returns all available currencies.\n",
@@ -215,11 +215,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "collectionId": "01fef1b4fef514f533cf759ce1b86113",
             "rawModeData": ""
         },
         {
-            "id": "3cda7b47f70b0d191b3480106e7af6eb",
+            "id": "fd4fa0f02491ec927f0887f26b542475",
             "name": "Currency by ID",
             "url": "httpsapi.openfintech.io\/v1\/\/currencies\/{id}",
             "description": "Returns currency with specific ID.\n",
@@ -238,11 +238,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "collectionId": "01fef1b4fef514f533cf759ce1b86113",
             "rawModeData": ""
         },
         {
-            "id": "07b5e46d437e50fce8422f9507bf14a2",
+            "id": "e89108b0f990b8108b9be401a091e876",
             "name": "List of exchangers",
             "url": "httpsapi.openfintech.io\/v1\/\/exchangers",
             "description": "Returns list of exchange markets. Each object contains general information about exchanger such as name and status, also information about rates export and related link to main organization.<br>\nRates export standards is represented by:\n* [estandards](http:\/\/estandards.info)\n* [jsons](http:\/\/jsons.info)\n* ratex - our internal standard\n",
@@ -269,11 +269,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "collectionId": "01fef1b4fef514f533cf759ce1b86113",
             "rawModeData": ""
         },
         {
-            "id": "00f6ddbf0cbfd177593afc04a457bdf6",
+            "id": "163bd08f5952bda476435420fbed3d64",
             "name": "Exchanger by ID",
             "url": "httpsapi.openfintech.io\/v1\/\/exchangers\/{id}",
             "description": "Returns exchanger with specific ID.\n",
@@ -292,11 +292,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "collectionId": "01fef1b4fef514f533cf759ce1b86113",
             "rawModeData": ""
         },
         {
-            "id": "636701aecb4d3ade75b947fc4e19dc0f",
+            "id": "997a20f3a49045986a55ea439caab177",
             "name": "List of merchant industries",
             "url": "httpsapi.openfintech.io\/v1\/\/merchant-industries",
             "description": "Returns all available merchant fields of activity.\n",
@@ -315,11 +315,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "collectionId": "01fef1b4fef514f533cf759ce1b86113",
             "rawModeData": ""
         },
         {
-            "id": "a3475fca639a4fc38c05f7803f238f16",
+            "id": "e46dde64fbf202a48947713bb8e7c29f",
             "name": "Merchant industry by ID",
             "url": "httpsapi.openfintech.io\/v1\/\/merchant-industries\/{id}",
             "description": "Returns merchant industry with specific ID.\n",
@@ -338,11 +338,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "collectionId": "01fef1b4fef514f533cf759ce1b86113",
             "rawModeData": ""
         },
         {
-            "id": "95ad7d60c5bd31891e4a7417896e34cc",
+            "id": "5683f2cb61f65e434971c2e5311daf8c",
             "name": "List of organizations",
             "url": "httpsapi.openfintech.io\/v1\/\/organizations",
             "description": "This endpoint retrievs the list of organizations present in the system. The data displays general, public information, without reference to the type of activity (for example - name, address, contacts, etc.).\n",
@@ -383,11 +383,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "collectionId": "01fef1b4fef514f533cf759ce1b86113",
             "rawModeData": ""
         },
         {
-            "id": "ee7cde171d0bda78bc669e773ee16ce9",
+            "id": "faac888a79e413492a7dd6955788f149",
             "name": "Organization by ID",
             "url": "httpsapi.openfintech.io\/v1\/\/organizations\/{id}",
             "description": "Returns organization with specific ID.\n",
@@ -406,11 +406,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "collectionId": "01fef1b4fef514f533cf759ce1b86113",
             "rawModeData": ""
         },
         {
-            "id": "9543691d5c2c47f84ca74637be939a7d",
+            "id": "f1cf348696589605f6556926c9d2fd12",
             "name": "List of payment methods",
             "url": "httpsapi.openfintech.io\/v1\/\/payment-methods",
             "description": "Returns list of payment methods. Each object contains information about payment method such as name and category, also related link to payment method issuer (which processing it).\n",
@@ -458,11 +458,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "collectionId": "01fef1b4fef514f533cf759ce1b86113",
             "rawModeData": ""
         },
         {
-            "id": "41fbe34ab39c53fa6327e2ff91d88ce9",
+            "id": "cb4bcf791b36a3cccf1af7c018d19102",
             "name": "Payment method by ID",
             "url": "httpsapi.openfintech.io\/v1\/\/payment-methods\/{id}",
             "description": "Returns payment method with specific ID.\n",
@@ -481,11 +481,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "collectionId": "01fef1b4fef514f533cf759ce1b86113",
             "rawModeData": ""
         },
         {
-            "id": "68ceae36cc6dd9da6a0af54b174a5f94",
+            "id": "dc3c84f88aa7f629c40dcaa5f468089e",
             "name": "List of payment providers",
             "url": "httpsapi.openfintech.io\/v1\/\/payment-providers",
             "description": "A payment service provider (PSP) offers shops online services for accepting electronic payments by a variety of payment methods.<br> Endpoint returns list of PSPs. Each object contains: name, type, supported features and sales channels, also related link to available payment methods and main organization.\n",
@@ -540,11 +540,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "collectionId": "01fef1b4fef514f533cf759ce1b86113",
             "rawModeData": ""
         },
         {
-            "id": "7fda5123acaa7103cff880968394b850",
+            "id": "5f0d97991bc338aadb67d2419d725f9f",
             "name": "Payment provider by ID",
             "url": "httpsapi.openfintech.io\/v1\/\/payment-providers\/{id}",
             "description": "Returns payment provider with specific ID.\n",
@@ -563,7 +563,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3e21bd6b5b39510c4d3a5bd164cd22a1",
+            "collectionId": "01fef1b4fef514f533cf759ce1b86113",
             "rawModeData": ""
         }
     ]
